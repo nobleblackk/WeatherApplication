@@ -6,6 +6,7 @@ const forecast = require("./utils/forecast");
 
 // console.log(__dirname);
 // console.log(path.join(__dirname, "../public"));
+// This is change to be made for git commit
 
 const app = express();
 

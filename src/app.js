@@ -49,7 +49,7 @@ app.get("/help", (req, res) => {
   res.render("help", {
     title: "Help",
     name: "Abhishek Sharma",
-    helpText: "This is some helpful text.",
+    helpText: "The Source Code For This Application can be accessed at: ",
     // footer: "Help Desk",
   });
 });

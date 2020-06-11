@@ -13,12 +13,18 @@ const forecast = (latitude, longitude, callback) => {
     } else if (body.cod) {
       callback("Unable to find location", undefined);
     } else {
+      // console.log(body.daily[0]);
       callback(
         undefined,
         body.daily[0].weather[0].description +
+          "." +
           " It is currently " +
           body.current.temp +
-          " degrees out."
+          " degrees out. The high today is " +
+          body.daily[0].temp.max +
+          " with a low of " +
+          body.daily[0].temp.min +
+          "."
       );
     }
   });

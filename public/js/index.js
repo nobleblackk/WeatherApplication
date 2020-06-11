@@ -24,10 +24,17 @@ const search = document.querySelector("input");
 const messageOne = document.querySelector("#message-1");
 const messageTwo = document.querySelector("#message-2");
 
+messageOne.style.color = "blue";
+messageOne.style.fontSize = "1.5rem";
+messageTwo.style.fontSize = "1.5rem";
+
 // messageOne.textContent = "From JS";
 
 weatherForm.addEventListener("submit", (event) => {
   event.preventDefault(); // Preventing page from reloading again and again
+  messageOne.style.color = "blue";
+  messageTwo.style.color = "black";
+
   const location = search.value;
   console.log(location);
 
@@ -39,10 +46,13 @@ weatherForm.addEventListener("submit", (event) => {
     response.json().then((data) => {
       if (data.error) {
         //   console.log(data.error);
+        messageOne.style.color = "red";
         messageOne.textContent = data.error;
       } else {
         //   console.log(data.location);
         //   console.log(data.forecast);
+        messageOne.style.color = "Black";
+
         messageOne.textContent = data.location;
         messageTwo.textContent = data.forecast;
       }

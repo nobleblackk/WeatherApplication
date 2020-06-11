@@ -9,12 +9,15 @@
     <link rel="stylesheet" href="/css/index.css" />
 </head>
 
-<body>
+<body style="background-color: lightgrey;">
     <div class="main-content">
         {{>header}}
-        <p>This site is created by Abhishek Sharma. It uses data from mapbox.com and openweathermap!</p>
+        <p style="font-size: 1.5rem;">This site is created by Abhishek Sharma. It uses data from mapbox.com and
+            openweathermap and return the Real
+            Time Weather Forecast !</p>
         {{!-- <h1>{{title}}</h1> --}}
-        <img class="portrait" src="/images/me.jpeg" alt="Image Not Found" />
+        <img style="display: block; margin-left: auto; margin-right: auto; width: 50%; border-radius: 10%;"
+            class="portrait" src="/images/me.jpeg" alt="Image Not Found" />
     </div>
 
     {{>footer}}

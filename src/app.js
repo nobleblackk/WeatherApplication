@@ -9,6 +9,8 @@ const forecast = require("./utils/forecast");
 // This is change to be made for git commit
 
 const app = express();
+// Herolu is going to assign a port to this app by its own, which is an environment variable and can be accessed by "process.env.PORT", but in case if are running it locally, so using pipe sign and providing a port no manually, i.e. 3000
+const port = process.env.PORT || 3000;
 
 // Define paths for express config
 const publicDirectoryPath = path.join(__dirname, "../public");
@@ -133,6 +135,6 @@ app.get("*", (req, res) => {
 });
 
 // starting the server up
-app.listen(3000, () => {
-  console.log("Server is up on port 3000");
+app.listen(port, () => {
+  console.log("Server is up on port" + port);
 });
